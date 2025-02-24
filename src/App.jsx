@@ -1,10 +1,20 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import { HomePage } from "./pages";
+import { Layout } from "@/layout";
 
 function App() {
   return (
-    <>
-      <h1 className="text-red-600">hello world</h1>
-    </>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <Layout>
+            <HomePage />
+          </Layout>
+        }
+      />
+    </Routes>
   );
 }
 
